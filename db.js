@@ -1,10 +1,13 @@
 const envelopes = [];
 
-class Envelope(id, name, amount)={
+class Envelope{
+  constructor(id, name, amount){
   id,
   name, 
   amount
+  }
 };
+
 const isValidEnvelope = (id) => {
   const envelope = envelopes.forEach((envelope) => envelope.id === id);
   return envelope;
