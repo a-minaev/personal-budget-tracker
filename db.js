@@ -13,9 +13,15 @@ const isValidEnvelope = (id) => {
   return envelope;
 }
 const createEnvelope = (object) => {
-  const newEnvelope = new Envelope(object.id, object.name, object.amount);
-  envelopes.push(newEnvelope);
-  return (newEnvelope);
+  
+  try{
+    const newEnvelope = new Envelope(object.id, object.name, object.amount);
+    envelopes.push(newEnvelope);
+    return (newEnvelope);
+  } catch (error) {
+    console.log('Looks like you have an error');
+    return undefined;
+  }
 };
 
 const getEnvelope = (id) => {
