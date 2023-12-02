@@ -15,5 +15,5 @@ const PORT = process.env.PORT || 4001;
 
 
 
-app.listen(PORT, console.log(`listing on port ${PORT}`));
+app.listen(PORT, () => {console.log(`listing on port ${PORT}`)});
 
