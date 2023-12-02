@@ -62,3 +62,5 @@ apiRouter.delete('/envelopes/:id', (req, res, next) => {
         res.status(404).send();
     }
 });
+
+module.exports = apiRouter;
